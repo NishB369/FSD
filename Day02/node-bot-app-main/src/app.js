@@ -1,0 +1,32 @@
+import rest from './utils/rest.js';
+import { operation } from './config.js';
+import sleep from './utils/sleep.js';
+import filelog from './utils/filelog.js';
+import launch from './utils/launch.js';
+
+process.on('uncaughtException', (e) => {
+  console.error(e);
+});
+
+async function run() {
+  const { wakeUpTimeMs, workTimeMs, workWaitMs } = operation;
+
+  const restTime = rest(wakeUpTimeMs, workTimeMs);
+  if (restTime > 0) {
+    filelog('BOT_APP_SLEEP');
+    await sleep(restTime);
+    filelog('BOT_APP_AWAKE');
+  }
+
+  filelog('BOT_APP_RESTING');
+  await sleep(workWaitMs);
+  filelog('BOT_APP_WORKING');
+  await sleep(5000); // work for 5 sec
+
+  run();
+}
+
+filelog('BOT_APP_RUN');
+launch('messenger');
+launch('news');
+run();
