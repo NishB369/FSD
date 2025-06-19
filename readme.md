@@ -76,6 +76,8 @@
 
 </details>
 
+<br>
+
 <details open>
 <summary><strong>🎨 Phase 2: Frontend</strong></summary>
 

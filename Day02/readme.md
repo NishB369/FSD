@@ -4,71 +4,91 @@
 - [JavaScript Most Used Modern Features](https://fifocode.com/article/javascript-most-used-modern-features)
 - [Claude Chat](https://claude.ai/chat/4fefe719-fa75-43b7-9805-eef66dbbb101)
 
-## Bot Creation
+## Bot
 
+<details open><summary><strong>🤖 Bot Brief</strong></summary>
+
+### Cron Jobs
+   - Cron is a time-based job scheduler in Unix/Linus that runs commands automatically at specified times
+   - Our bot is a cron job with bit more features like
+     - dynaic scheduling
+     - persistent logging
+     - parallel processing
+     - self managing lefy-cycle
+   
+   ### Project Ideas (Basic -> Advance)
+   - Basic News Aggrigator, Weather or Crypto Dashbaords
+   - Job Portals Monitoring and Brand Social Media Tracking
+   - API Health Monitor 
+
+</details>
+
+<br>
+<details>
+<summary><strong>👨‍💻 Code Summary</strong></summary>
 1. Project Creation
 
-   1. Linitng
-   2. Prettier
-   3. package.json and package-lock.json
-   4. gitignore
-   5. env setup
+1.  Linitng
+2.  Prettier
+3.  package.json and package-lock.json
+4.  gitignore
+5.  env setup
 
-2. App.js File
+6.  App.js File
 
-   1. Import Statements
-      - rest
-      - sleep
-      - filelog
-      - launch
-      - operations
-   2. process object uncaught err handling
+    1.  Import Statements
+        - rest
+        - sleep
+        - filelog
+        - launch
+        - operations
+    2.  process object uncaught err handling
 
-      ```javascript
-      process.on("uncaughtexpressoin"),
-        (e) => {
-          console.error(e);
-        };
-      ```
+        ```javascript
+        process.on("uncaughtexpressoin"),
+          (e) => {
+            console.error(e);
+          };
+        ```
 
-   3. async function run() definition
-      - desturcturing of time related fields from operatoin object from config file
-      - calculating restTime from rest()
-      - condition based block
-        - restTime >0 --> sleep and then wake up
-        - restTime <0 --> work and rest cycles
-   4. recursive run() call
+    3.  async function run() definition
+        - desturcturing of time related fields from operatoin object from config file
+        - calculating restTime from rest()
+        - condition based block
+          - restTime >0 --> sleep and then wake up
+          - restTime <0 --> work and rest cycles
+    4.  recursive run() call
 
-      - concern of `stack overflow`
+        - concern of `stack overflow`
 
-      #### What is it?
+        #### What is it?
 
-      - **Stack overflow** = Program crashes when too many function calls pile up without finishing.
+        - **Stack overflow** = Program crashes when too many function calls pile up without finishing.
 
-      #### Simple Analogy
+        #### Simple Analogy
 
-      - Like stacking plates - if you keep adding plates without removing any, the stack falls over.
+        - Like stacking plates - if you keep adding plates without removing any, the stack falls over.
 
-      #### Common Cause - Infinite Recursion
+        #### Common Cause - Infinite Recursion
 
-      ```javascript
-      // BAD - Will crash
-      function loop() {
-        loop(); // Calls itself forever
-      }
+        ```javascript
+        // BAD - Will crash
+        function loop() {
+          loop(); // Calls itself forever
+        }
 
-      // GOOD - Has a stop condition
-      function countdown(n) {
-        if (n <= 0) return; // STOP HERE
-        // countdown(n - 1);
-      }
-      ```
+        // GOOD - Has a stop condition
+        function countdown(n) {
+          if (n <= 0) return; // STOP HERE
+          // countdown(n - 1);
+        }
+        ```
 
-      #### Quick Fixes
+        #### Quick Fixes
 
-      1. **Add base case** - Give recursion a way to stop
-      2. **Use loops instead** - `while` or `for` loops don't add to stack
-      3. **Add `await`** - In async functions, always await recursive calls
+        1. **Add base case** - Give recursion a way to stop
+        2. **Use loops instead** - `while` or `for` loops don't add to stack
+        3. **Add `await`** - In async functions, always await recursive calls
 
 ## dot env
 
@@ -153,3 +173,4 @@
   - Logs via `filelog(botname, 'error', error)`
   - Outputs to console via `console.error(error)`
 - Creates isolated worker threads for bots with safety checks and error logging.
+</details>
