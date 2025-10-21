@@ -13,7 +13,7 @@
 2. [Every Type Of API You Must Know Explained!](https://www.youtube.com/watch?v=pBASqUbZgkY)
 
 ---
-3. Section 20: Introduction to Databases
+3. Section 21: Building a complete Backend
    1. 114. Hash the password with pre hooks of mongoose
    2. 115. Learn to handle mongoose methods
    3. 116. What are JWT Tokens
