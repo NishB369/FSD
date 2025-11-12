@@ -1,4 +1,4 @@
-## November 09, 2025 (Saturday)
+## November 09, 2025 (Sunday)
 
 ### Learnings
 
