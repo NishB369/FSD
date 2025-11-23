@@ -1,4 +1,4 @@
-## November 20, 2025 (Thursday)
+## November 21, 2025 (Friday)
 
 ### Learnings
 1. So many
