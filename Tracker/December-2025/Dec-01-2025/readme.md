@@ -1,4 +1,4 @@
-## November 01, 2025 (Monday)
+## Decemeber 01, 2025 (Monday)
 
 ### Learnings
 1. Bought a Mac
