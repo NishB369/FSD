@@ -1,10 +1,11 @@
-## December 15, 2025 (Monday)
+## December 14, 2025 (Sunday)
 
 ### Learnings
-1. Content Audience Defines Value
+1.
 
 ### Stuff Coded
-1. Jaipur MVP and Allo Work
+1. GoAutomate and Jaipur MVP
 
 ### To Learn
 1. in page SEO
+
